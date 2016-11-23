@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>Typewriter Example</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+			.typewriter{
+				font-family: 'Special Elite', cursive;
+			}
+			.blinky{
+				font-weight:200;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h3>Slow example</h3>
+		<div class='typewriter'>
+			I love <span id='things-i-love'></span>
+		</div>
+		
+		<h3>Fast example</h3>
+		<div class='typewriter'>
+			I hate <span id='things-i-hate'></span>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="typewriter.js"></script>
+		<script>
+			var thingsILove = [
+				"long walks on the beach", 
+				"a good hamburger", 
+				"scary movies",
+				"writing javascript"
+			];
+			$("#things-i-love").typewriter(thingsILove, 250, 2000);
+			
+			var thingsIHate = [
+				"things that smell", 
+				"things that are bad", 
+				"grouchy people",
+				"people who downvote on S.O. for no reason",
+				"pickles",
+				"mosquitoes",
+				"sushi",
+				"sunburn",
+				"nazis",
+				"the kkk",
+				"apple cider",
+				"writing javascript"
+			];
+			$("#things-i-hate").typewriter(thingsIHate, 100, 500);
+			
+		</script>
+	</body>
+</html>
